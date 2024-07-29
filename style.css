@@ -1,0 +1,450 @@
+:root{
+    --primary-text-color: hsl(200, 15%, 8%);
+    --secondary-text-color: hsl(0, 0%, 52%);
+    --tertiary-text-color: hsl(0, 0%, 98%);
+    --primary-background: hsl(0, 0%, 52%);
+    --secondary-background: hsl(0, 0%, 98%);
+    --tertiary-background-color: hsl(0, 0%, 100%);
+
+    --box-shadow: hsla(0, 0%, 52%, 0.2);
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Nunito Sans';
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--secondary-background);
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+
+}
+.darkMode{
+    --primary-text-color: hsl(0, 0%, 100%);
+    --secondary-text-color: hsl(0, 0%, 98%);
+    --tertiary-text-color: hsl(0, 0%, 52%);
+    --primary-background: hsl(200, 15%, 8%);
+    --secondary-background: hsl(207, 26%, 17%);
+    --tertiary-background-color: hsl(209, 23%, 22%);
+    --box-shadow: hsla(0, 0%, 52%, 0.1);
+}
+.lightMode{
+  --primary-text-color: hsl(200, 15%, 8%);
+  --secondary-text-color: hsl(0, 0%, 52%);
+  --tertiary-text-color: hsl(0, 0%, 98%);
+  --primary-background: hsl(0, 0%, 52%);
+  --secondary-background: hsl(0, 0%, 98%);
+  --tertiary-background-color: hsl(0, 0%, 100%);
+  --box-shadow: hsla(0, 0%, 52%, 0.2);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+    width: 100%;
+    background-color: var(--tertiary-background-color);
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    transition: background-color 0.5s ease-in-out;
+    box-shadow: 0 1px 5px var(--box-shadow);
+}
+.secondHeader{
+    top: 49px;
+    padding: 35px 80px;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: var(--secondary-background);
+    transition: background-color 0.5s ease-in-out;
+}
+.searchContainer button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+header h2{
+    color: var(--primary-text-color);
+    font-size: 22px;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+header p{
+    color: var(--primary-text-color);
+    font-weight: 400;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.searchIcon,
+.modeEmoji{
+    width: 20px;
+    height: 20px;
+}
+.modeEmoji{
+    cursor: pointer;
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.colorMode{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.searchContainer{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.searchContainer{
+    background-color: var(--tertiary-background-color);
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    box-shadow: 0 1px 5px var(--box-shadow);
+}
+.searchContainer input{
+    padding: 5px;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    width: 350px;
+    color: var(--secondary-text-color);
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.searchIcon{
+    height: 16px;
+    width: 16px;
+    transition: 0.5s ease-in-out;
+}
+.regionSelector{
+    background-color: var(--tertiary-background-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    color: var(--primary-text-color);
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 1px 5px var(--box-shadow);
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.backBtn{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    gap: 10px;
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 var(--primary-background);
+    background-color: var(--tertiary-background-color);
+    color: var(--primary-text-color);
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.backBtn span{
+    color: var(--primary-text-color);
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.backArrow{
+  width: 20px;
+}
+section{
+    position: relative;
+    top: 159px;
+    padding: 0 80px 30px 80px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--secondary-background);
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    gap: 45px;
+}
+.countryCard{
+    background-color: var(--tertiary-background-color);
+    width: 260px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    box-shadow: 0 1px 5px var(--box-shadow);
+}
+.countryCard:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.01);
+}
+.countryCard img{
+    height: 155px;
+    width: 100%;
+    object-fit: cover;
+}
+.countryInfo{
+    padding: 15px 15px 35px 15px;
+}
+.countryInfo h3{
+    color: var(--primary-text-color);
+    margin-bottom: 15px;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.countryInfo p,
+.otherValues p{
+    color: var(--primary-text-color);
+    font-weight: 400;
+    margin-top: 10px;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.label,
+.cardValueLabel{
+   font-weight: 400;
+   color: var(--primary-text-color);
+   transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.countryInfo p span:last-child,
+.otherValues p span:last-child{
+    font-weight: 100;
+    color: var(--primary-text-color);
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.bordersContainer{
+    margin-top: 30px;
+}
+.otherValues{
+  padding: 15px;
+  display: none;
+}
+.moreCountryInfo{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100vh;
+    padding: 50px 100px;
+    background-color: var(--tertiary-background-color);
+    z-index: 100;
+    display: none;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.moreCountryInfo.active{
+  display: block;
+  animation: fadeInOut 0.5s;
+  overflow-y: scroll;
+}
+@keyframes fadeInOut {
+  0%{opacity: 0;}
+  100%{opacity: 1}
+}
+.flagAndInfoContainer{
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    gap: 100px;
+}
+.flagDiv{
+  width: 500px;
+  height: 350px;
+  max-width: 100%;
+  height: 100%;
+  min-width: 300px;
+  min-height: 150px;
+}
+.flagDiv img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.informationDiv{
+    display: flex;
+    gap: 100px;
+}
+.infoDiv h3{
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: var(--primary-text-color);
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.information1,
+.information2{
+    line-height: 1.7;
+}
+.information1 p,
+.information2 p,
+.borderCountries{
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--primary-text-color);
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.information1 span,
+.information2 span{
+    font-weight: 100;
+    color: var(--primary-text-color);
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.borderCountries{
+    z-index: 1;
+    margin-top: 30px;
+    font-weight: 100;
+    padding: 5px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: var(--tertiary-background-color);
+    box-shadow: 0 0 5px var(--secondary-background);
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+.otherValues{
+    border-top: 1px solid red;
+}
+
+@media (max-width:1200px){
+    section{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .flagAndInfoContainer{
+    gap: 30px;
+    }
+    .moreCountryInfo{
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+}
+@media (max-width:983px){
+    section{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .informationDiv{
+      gap: 50px;
+    }
+}
+@media (max-width:756px){
+    .searchContainer{
+        width: 240px;
+    }
+    header,
+    .secondHeader,
+    section{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .moreCountryInfo{
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+}
+@media (max-width:697px){
+    .informationDiv,
+    .flagAndInfoContainer{
+    flex-direction: column;
+    align-items: unset;
+  }
+  .flagDiv{
+    width: 100%;
+    min-width: unset;
+    min-height: unset;
+  }
+  .backBtn{
+    padding: 5px 10px;
+    font-size: 15px;
+  }
+}
+@media (max-width:616px){
+  section{
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .secondHeader{
+
+  }
+  .countryCard{
+    width: 100%;
+  }
+  .countryCard img{
+    max-height: 50vw;
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+  }
+  .bordersContainer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .borderCountries{
+    margin-top: 0;
+  }
+}
+.borderCountrie
+}
+@media (max-width:550px){
+    section,
+    header,
+    .secondHeader,
+    .moreCountryInfo{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    form{
+        flex-direction: column;
+        align-items: start;
+        gap: 35px;
+    }
+    section{
+        top: 211px;
+    }
+}
+@media (max-width:478px){
+  section{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  form{
+    flex-direction: column;
+    gap: 20px;
+    align-items: unset;
+  }
+  .regionSelector{
+    width: 160px;
+  }
+  .secondHeader{
+    justify-content: unset;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width:380px){
+    .searchContainer{
+      width: 100%
+    }
+    header{
+        align-items: center;
+    }
+    header h2{
+        font-size: 16px;
+    }
+    .secondHeader{
+        align-items: center;
+        top: 42px;
+    }
+    section{
+        top: 216px;
+    }
+    .modeEmoji{
+        height: 16px;
+        width: 16px;
+    }
+    .colorMode p{
+        font-size: 14px;
+    }
+}

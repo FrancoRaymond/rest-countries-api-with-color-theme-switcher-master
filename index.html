@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Rest countries API</title>
+</head>
+<body class="lightMode">
+<header>
+    <h2>Where in the world?</h2>
+    <div class="colorMode">
+        <img alt="" src="Images/black moon.png" class="modeEmoji">
+        <p>Dark Mode</p>
+    </div>
+</header>
+<div class="secondHeader">
+    <form action="">
+        <div class="searchContainer">
+            <button type="submit"><img src='Images/search.png' class="searchIcon"></button>
+            <input type="text" id="searchText" placeholder="Search for a country...">
+        </div>
+        <select name="searchFilter" class="regionSelector">
+            <option value="">Filter by region...</option>
+            <option value="Africa">Africa</option>
+            <option value="America">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+        </select>
+    </form>
+    <div class="moreCountryInfo">
+      <button class="backBtn"><img src="Images/arrow-back-black.svg" alt="" class="backArrow"><span>Back</span></button>
+        <div class="flagAndInfoContainer">
+            <div class="flagDiv">
+                <img  alt="countryFlag" class="countryFlag">
+            </div>
+            <div class="infoDiv">
+                <h3></h3>
+                <div class="informationDiv">
+                    <div class="information1">
+                        <p>Native Name: <span class="nativeName">Belgie</span></p>
+                        <p>Population: <span class="population">81 770 900</span></p>
+                        <p>Region: <span class="region">Europe</span></p>
+                        <p>Sub Region: <span class="subRegion">Western Europe</span></p>
+                        <p>Capital: <span class="capital">Brussels</span></p>
+                    </div>
+                    <div class="information2">
+                        <p>Top Level Domain: <span class="topLevelDomain">.be</span></p>
+                        <p>Currencies: <span class="currencies">Euro</span></p>
+                        <p>Languages:    <span class="languages">Dutch, French, German</span></p>
+                    </div>
+                </div>
+                <p class="bordersContainer"><span class="label">Border Countries:</span><span class="borderCountries"></span><span class="borderCountries"></span><span class="borderCountries"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section>
+
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
